@@ -3,6 +3,8 @@ package com.ipiecoles.java.java350.model;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class EmployeTest {
