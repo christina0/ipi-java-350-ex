@@ -10,7 +10,7 @@ class EmployeTest {
     @Test
     void getNombreAnneeAncienneteWithDataEmbaucheNow() {
         //Given
-        Employe employe = new Employe("Doe", "John", "T12345", LocalDate.now().plusyears(6), 2500.0, 1, 1.0);
+        Employe employe = new Employe("Doe", "John", "T12345", LocalDate.now().plusYears(6), 2500.0, 1, 1.0);
 
         //When
         Integer nbAnnees = employe.getNombreAnneeAnciennete();
