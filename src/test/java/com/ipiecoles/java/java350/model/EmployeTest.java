@@ -40,4 +40,39 @@ class EmployeTest {
         Assertions.assertThat(nbAnnees).isNull();
     }
 
+    @Test
+    void getAugmentationSalaire(){
+        //Given
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 1200.0, performance, 25.0);
+
+        //When
+        Double Augmentation = employe.augmenterSalaire(20);
+
+        //Then
+        Assertions.assertThat(Augmentation).isEqualTo(1440.0);
+    }
+
+    @Test
+    void getAugmenterSalaireNull(){
+        //Given
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 0.0, performance, 25.0);
+
+        //When
+        Double Augmentation = employe.augmenterSalaire(23);
+
+        //Then
+        Assertions.assertThat(Augmentation).isEqualTo(0);
+    }
+
+    @Test
+    void getAugSalaireNégatif(){
+        //Given
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), -1200.0, performance, 35.0);
+
+        //When
+        Double Augmentation = employe.augmenterSalaire(25);
+
+        //Then
+        Assertions.assertThat(Augmentation).isEqualTo(-1500);
+    }
 }
