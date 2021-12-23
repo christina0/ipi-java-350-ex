@@ -58,10 +58,10 @@ class EmployeTest {
         Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 0.0, 1, 25.0);
 
         //When
-        Double Augmentation = employe.augmenterSalaire(23);
+        Double augmentation = employe.augmenterSalaire(23);
 
         //Then
-        Assertions.assertThat(Augmentation).isEqualTo(0);
+        Assertions.assertThat(augmentation).isEqualTo(0);
     }
 
     @Test

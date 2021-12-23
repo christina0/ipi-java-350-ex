@@ -117,9 +117,9 @@ case SATURDAY:var = var + 1;
     //Augmenter salaire
     public Double augmenterSalaire(double pourcentage){
 
-        Double Augmentation = this.salaire + ((this.salaire * pourcentage) /100);
+        Double augmentation = this.salaire + ((this.salaire * pourcentage) /100);
 
-        return Augmentation;
+        return augmentation;
     }
 
 
