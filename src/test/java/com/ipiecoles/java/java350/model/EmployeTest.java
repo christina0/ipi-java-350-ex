@@ -43,7 +43,7 @@ class EmployeTest {
     @Test
     void getAugmentationSalaire(){
         //Given
-        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 1200.0, performance, 25.0);
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 1200.0, 3, 25.0);
 
         //When
         Double Augmentation = employe.augmenterSalaire(20);
@@ -55,7 +55,7 @@ class EmployeTest {
     @Test
     void getAugmenterSalaireNull(){
         //Given
-        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 0.0, performance, 25.0);
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), 0.0, 1, 25.0);
 
         //When
         Double Augmentation = employe.augmenterSalaire(23);
@@ -65,9 +65,9 @@ class EmployeTest {
     }
 
     @Test
-    void getAugSalaireNégatif(){
+    void getAugmenterSalaireN(){
         //Given
-        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), -1200.0, performance, 35.0);
+        Employe employe = new Employe("Doe", "Jane", "C102054", LocalDate.now().minusYears(2), -1200.0, 2, 35.0);
 
         //When
         Double Augmentation = employe.augmenterSalaire(25);
